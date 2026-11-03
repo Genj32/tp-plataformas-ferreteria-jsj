@@ -1,22 +1,31 @@
-import { useAuth } from "../context/AuthContext";
+import Header from "../components/Header";
+import ProductoCard from "../components/ProductoCard";
 import { productos } from "../data/productos";
+import "./Catalogo.css";
 
 export default function Catalogo() {
-  const { usuario, logout } = useAuth();
-
   return (
     <div>
-      <header>
-        <h2>JSJ Ferretería</h2>
-        <div>
-          <span>Carrito (0)</span>
-          <span>{usuario?.nombre}</span>
-          <button onClick={logout}>Salir</button>
-        </div>
-      </header>
+      {/* Pasamos el título por prop */}
+      <Header titulo="Ferretería" />
+      
       <main>
-        <input type="text" placeholder="Buscar productos, marcas..." />
-        {/* aca van a ir los filtros y las cards de los productos */}
+        <input type="text" placeholder="Buscar productos, marcas..." className="input-busqueda" />
+        {/* Filtros de categorías */}
+        <div className="filtros">
+          <button className="filtro-activo">Todos</button>
+          <button>Herramientas</button>
+          <button>Construcción</button>
+          <button>Pintura</button>
+          <button>Sanitarios</button>
+        </div>
+
+        {/* Grilla dinámica de productos */}
+        <div className="grilla-productos">
+          {productos.map((producto) => (
+            <ProductoCard key={producto.id} producto={producto} />
+          ))}
+        </div>
       </main>
     </div>
   );

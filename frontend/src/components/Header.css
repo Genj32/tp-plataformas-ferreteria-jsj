@@ -1,0 +1,48 @@
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 30px;
+}
+
+.header-izq, .header-der {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-jsj {
+  background-color: var(--accent);
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.header-titulo {
+  margin: 0;
+  font-size: 20px;
+}
+
+.header-item {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.btn-logout {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-logout:hover {
+  background: var(--border);
+  color: white;
+}
