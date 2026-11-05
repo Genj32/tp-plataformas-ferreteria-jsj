@@ -1,8 +1,11 @@
 import Header from "../components/Header";
-import { productos } from "../data/productos";
+import { useProductos} from "../context/ProductoContext"
+import {Formulario} from "../components/Formulario"
 import "./Admin.css";
 
 export default function Admin() {
+
+const { productos, borrar, setProductoEditando } = useProductos();
   return (
     <div className="contenedor-pagina">
       <Header titulo="Panel de administración" />
@@ -10,7 +13,7 @@ export default function Admin() {
       <main>
         <div className="admin-acciones">
           <p>{productos.length} productos</p>
-          <button className="btn-nuevo">Nuevo producto</button>
+          <Formulario />
         </div>
 
         <table className="tabla-admin">
@@ -26,15 +29,15 @@ export default function Admin() {
             {productos.map((producto) => (
               <tr key={producto.id}>
                 <td>{producto.nombre}</td>
-                <td>$ {producto.precio.toLocaleString("es-AR")}</td>
+                <td>$ {Number(producto.precio || 0 ).toLocaleString("es-AR")}</td>
                 <td>
                   {producto.stock} 
                   {/*si el stock es menor a 5, muestra la etiqueta "bajo" */}
                   {producto.stock < 5 && <span className="stock-critico">bajo</span>}
                 </td>
                 <td className="acciones-celda">
-                  <button className="btn-icono">✏️</button>
-                  <button className="btn-icono">🗑️</button>
+                  <button className="btn-icono" onClick={() => setProductoEditando(producto)}>✏️</button>
+                  <button className="btn-icono" onClick={ () => borrar(producto.id)}>🗑️</button>
                 </td>
               </tr>
             ))}

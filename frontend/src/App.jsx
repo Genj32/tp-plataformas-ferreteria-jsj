@@ -4,16 +4,18 @@ import Catalogo from "./pages/Catalogo";
 import Admin from "./pages/Admin";
 import RutaProtegida from "./components/RutaProtegida";
 import { useAuth } from "./context/AuthContext";
+import {ProductoProvider} from "./context/ProductoContext"
 
 function App() {
   const { usuario } = useAuth();
 
   return (
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      
-      {/* Redirigi dependiendo del rol que tenga */}
-      <Route 
+    <ProductoProvider>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        
+        {/* Redirigi dependiendo del rol que tenga */}
+        <Route 
         path="/" 
         element={
           usuario ? (
@@ -42,6 +44,7 @@ function App() {
         } 
       />
     </Routes>
+    </ProductoProvider>
   );
 }
 
