@@ -20,6 +20,7 @@ const { productos, borrar, setProductoEditando } = useProductos();
           <thead>
             <tr>
               <th>Producto</th>
+              <th>Categoría</th>
               <th>Precio</th>
               <th>Stock</th>
               <th>Acciones</th>
@@ -29,6 +30,7 @@ const { productos, borrar, setProductoEditando } = useProductos();
             {productos.map((producto) => (
               <tr key={producto.id}>
                 <td>{producto.nombre}</td>
+                <td>{producto.categoria}</td>
                 <td>$ {Number(producto.precio || 0 ).toLocaleString("es-AR")}</td>
                 <td>
                   {producto.stock} 
