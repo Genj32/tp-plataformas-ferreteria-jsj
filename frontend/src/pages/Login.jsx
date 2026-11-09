@@ -50,6 +50,10 @@ return (
 
       {error && <p className="login-error">{error}</p>}
       <button type="submit">Ingresar</button>
+
+      <p className="login-links"><a href="#">¿Olvidaste tu contraseña?</a></p>
+      <p className="login-links">¿No tienes una cuenta? <a href="#">Regístrate</a></p>
+
     </form>
   </div>
 );
