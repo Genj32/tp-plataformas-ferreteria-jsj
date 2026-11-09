@@ -88,3 +88,18 @@
 .btn-icono:hover {
   opacity: 1;
 }
+
+.admin-acciones button {
+    background-color: #8b5cf6; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 16px; 
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.admin-acciones button:hover {
+    background-color: #7c3aed;
+}
