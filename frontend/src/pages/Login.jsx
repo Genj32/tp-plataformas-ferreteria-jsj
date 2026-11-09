@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import "./Login.css";
 
 export default function Login() {
   const { login } = useAuth();
@@ -23,24 +24,37 @@ export default function Login() {
     }
   }
 
-  return (
-    <form onSubmit={manejarSubmit}>
+return (
+  <div className="login-page">
+    <form className="login-card" onSubmit={manejarSubmit}>
+      <img src="/img/logo.png" alt="JSJ" className="login-logo" />
       <h2>Iniciar sesión</h2>
+
+      <label htmlFor="email">Email</label>
       <input
+        id="email"
         type="email"
         placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      {/* input de la contraseña: igual al de email, pero ¿qué type le toca? */}
+
+      <label htmlFor="password">Contraseña</label>
       <input
+        id="password"
         type="password"
         placeholder="Contraseña"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      {error && <p>{error}</p>}
+
+      {error && <p className="login-error">{error}</p>}
       <button type="submit">Ingresar</button>
+
+      <p className="login-links"><a href="#">¿Olvidaste tu contraseña?</a></p>
+      <p className="login-links">¿No tienes una cuenta? <a href="#">Regístrate</a></p>
+
     </form>
-  );
+  </div>
+);
 }
