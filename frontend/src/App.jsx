@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         
-        {/* Redirigi dependiendo del rol que tenga */}
+        
         <Route 
         path="/" 
         element={

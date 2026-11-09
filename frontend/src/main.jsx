@@ -4,12 +4,16 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import { AuthProvider } from './context/AuthContext'
+// 1. Importás el nuevo contexto de usuarios:
+import { UsuarioProvider } from './context/UsuarioContext' 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <AuthProvider>
-        <App />
+        <UsuarioProvider>
+          <App />
+        </UsuarioProvider>
       </AuthProvider>
     </BrowserRouter>
   </StrictMode>,

@@ -1,5 +1,5 @@
 /* Contenedor y diseño del formulario */
-.admin-acciones form {
+.admin-form {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -13,25 +13,25 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.admin-acciones form h2 {
+.admin-form h2 {
     color: #ffffff;
     font-size: 1.2rem;
     margin-bottom: 5px;
     font-weight: 600;
 }
 
-.admin-acciones form div {
+.admin-form div {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.admin-acciones form label {
+.admin-form label {
     color: #d4d4d8;
     font-size: 0.9rem;
 }
 
-.admin-acciones form input {
+.admin-form input {
     background-color: #27272a;
     border: 1px solid #3f3f46;
     border-radius: 4px;
@@ -41,14 +41,13 @@
     outline: none;
 }
 
-.admin-acciones form input:focus {
-    border-color: #7c3aed;
+.admin-form input:focus {
+    border-color: #8b5cf6;
 }
 
-.admin-acciones form button {
+.admin-form button {
     margin-top: 10px;
-    background-color: #7c3aed;
-    color: white;
+    background-color: #8b5cf6; 
     border: none;
     border-radius: 4px;
     padding: 10px;
@@ -57,6 +56,6 @@
     transition: background-color 0.2s;
 }
 
-.admin-acciones form button:hover {
-    background-color: #6d28d9;
+.admin-form button:hover {
+    background-color: #7c3aed; 
 }
