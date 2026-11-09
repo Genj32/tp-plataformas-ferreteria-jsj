@@ -11,7 +11,7 @@ export default function Header({ titulo }) {
                 <h2 className="header-titulo">{titulo}</h2>
             </div>
             <div className="header-der">
-                {usuario.rol !== "admuinistrador" && (
+                {usuario.rol === "cliente" && (
                     <span className="header-item">Carrito (0)</span>
                 )}
                 <span className="header-item">{usuario.nombre}</span>
@@ -19,4 +19,4 @@ export default function Header({ titulo }) {
                 </div>
         </header>
     );
-}
+}                                 
