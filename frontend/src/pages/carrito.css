@@ -1,0 +1,149 @@
+.carrito-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 16px 24px;
+  border-radius: 8px;
+}
+
+.item-info h3 {
+  margin: 0 0 4px 0;
+  color: var(--text-h);
+}
+
+.item-categoria {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0 0 8px 0;
+}
+
+.item-acciones {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.item-cantidad {
+  color: var(--text-muted);
+  background: var(--code-bg);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.item-subtotal {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-h);
+  min-width: 100px;
+  text-align: right;
+}
+
+.btn-icono-borrar {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.btn-icono-borrar:hover {
+  opacity: 1;
+}
+
+.carrito-resumen {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resumen-botones {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-vaciar {
+  background-color: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-vaciar:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-comprar, .btn-volver {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.control-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--code-bg);
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.btn-cant {
+  background: transparent;
+  color: var(--text-h);
+  border: none;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.btn-cant:hover {
+  background: var(--border);
+}
+
+.item-cantidad-num {
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+.btn-volver-outline {
+  background-color: transparent;
+  color: var(--text-h);
+  border: 1px solid var(--border);
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.btn-volver-outline:hover {
+  background-color: var(--border);
+}

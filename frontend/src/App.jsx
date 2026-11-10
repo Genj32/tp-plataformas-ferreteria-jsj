@@ -6,6 +6,7 @@ import Vendedor from "./pages/Vendedor";
 import RutaProtegida from "./components/RutaProtegida";
 import { useAuth } from "./context/AuthContext";
 import { ProductoProvider } from "./context/ProductoContext";
+import Carrito from "./pages/Carrito";
 
 function App() {
   const { usuario } = useAuth();
@@ -55,6 +56,16 @@ function App() {
             </RutaProtegida>
           }
         />
+
+        <Route
+          path="/carrito"
+          element={
+            <RutaProtegida>
+              <Carrito />
+            </RutaProtegida>
+          }
+        />
+        
       </Routes>
     </ProductoProvider>
   );
