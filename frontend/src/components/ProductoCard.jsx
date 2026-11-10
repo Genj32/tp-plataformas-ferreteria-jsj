@@ -3,7 +3,7 @@ import "./ProductoCard.css";
 export default function ProductoCard({ producto }) {
   return (
     <div className="producto-card">
-        <div className="imagen-placeholder"></div>
+        <div className="imagen-placeholder">🤖</div>
 
         <h3 className="producto-nombre">{producto.nombre}</h3>
         <p className="producto-categoria">{producto.categoria}</p>

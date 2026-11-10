@@ -1,4 +1,6 @@
 .contenedor-pagina {
+  width: 100%;
+  box-sizing: border-box;
   padding: 20px;
   max-width: 1000px;
   margin: 0 auto;
@@ -17,18 +19,27 @@
 
 .filtros {
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  gap: 20px;
   margin-bottom: 30px;
   flex-wrap: wrap;
 }
 
 .filtros button {
-  background: transparent;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   color: var(--text-muted);
-  padding: 6px 16px;
+  padding: 8px 20px;
   border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
+  transition: all 0.2 ease;
+}
+
+.filtros button:hover {
+  border-color: var(--accent);
+  color: var(--text-h);
 }
 
 .filtros button.filtro-activo {
@@ -41,4 +52,15 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
+}
+
+.mensaje-vacio {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 40px;
+  color: var(--text-muted);
+  background-color: var(--bg-card);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  font-size: 16px;
 }
